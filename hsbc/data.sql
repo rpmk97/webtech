@@ -1,0 +1,16 @@
+INSERT INTO EMPLOYEE_MASTER(NAME,SALARY,DESIG,DEPT,EMAIL,PHONE) VALUES('Rudra',120000.00,'Accountant','HR','Rudra@gmail.com','981200000'),
+('Rupayan',620000.00,'Engineer','Digital','Rupayan@gmail.com','981200023'),
+('Akansha',340000.00,'Lead','IT','Akansha@gmail.com','981200076'),
+('Esha',200000.00,'Architect','Digital','Esha@gmail.com','981200065'),
+('Poornima',600000.00,'Engineer','GBM','Poornima@gmail.com','981200011'),
+('Aditya',15000.00,'Engineer','IT','Aditya@gmail.com','981200033'),
+('Shreyash',23000.00,'Lead','Digital','Shreyash@gmail.com','981200045'),
+('Shubham',380000.00,'Accountant','Digital','Shubham@gmail.com','981200066'),
+('Nitish',900000.00,'Lead','GBM','Nitish@gmail.com','981200078'),
+('Eravatee',870000.00,'Architect','GBM','Eravatee@gmail.com','981200045'),
+('Krati',50000.00,'Engineer','RBWM','Krati@gmail.com','981200076'),
+('Utkarsh',30000.00,'Architect','GPB','Utkarsh@gmail.com','981200021'),
+('Sneha',50000.00,'Engineer','RBWM','Sneha@gmail.com','981200043'),
+('Lina',240000.00,'Engineer','RBWM','Lina@gmail.com','981200033'),
+('Beenu',670000.00,'Architect','GPB','Beenu@gmail.com','981200098');
+

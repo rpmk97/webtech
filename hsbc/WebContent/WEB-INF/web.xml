@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>hsbc</display-name>
+	
+  <servlet>
+  	<servlet-name>A</servlet-name>
+  	<servlet-class>com.example.servlet.HelloServlet</servlet-class>
+  	<init-param>
+  		<param-name>user.greet</param-name>
+  		<param-value>Good Morning</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>		
+  
+  <servlet>
+  	<servlet-name>B</servlet-name>
+  	<servlet-class>com.example.servlet.TimeServlet</servlet-class>
+  </servlet>		
+
+  <servlet>
+  	<servlet-name>C</servlet-name>
+  	<servlet-class>com.example.servlet.CalServlet</servlet-class>
+  </servlet>		
+ 
+  <servlet>
+  	<servlet-name>D</servlet-name>
+  	<servlet-class>com.example.servlet.MathServlet</servlet-class>
+  </servlet>	
+  
+   <servlet>
+  	<servlet-name>EMS</servlet-name>
+  	<servlet-class>com.example.servlet.EmployeeManagerServlet</servlet-class>
+  </servlet>	
+  
+  	
+  <servlet-mapping>
+  	<servlet-name>EMS</servlet-name>
+  	<url-pattern>/ems</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <servlet-mapping>
+  	<servlet-name>D</servlet-name>
+  	<url-pattern>/math</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+  	<servlet-name>C</servlet-name>
+  	<url-pattern>/calculator</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+  	<servlet-name>B</servlet-name>
+  	<url-pattern>/time</url-pattern>
+  </servlet-mapping>
+   
+  <!-- http://localhost:8080/hsbc/hello  -->
+  <servlet-mapping>
+  	<servlet-name>A</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
+  
+</web-app>

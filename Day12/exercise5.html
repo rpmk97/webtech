@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Flip Exercise</title>
+	<style>
+		img {
+			display : block;
+			border : 20px inset tomato;
+			width : 100px;
+			height: 100px;
+			margin: auto;
+			margin-top :50px;
+		}
+	</style>
+	<script>
+		var counter = 3;
+		
+		function changeImage() {
+			var nd = document.getElementById('img0');
+			nd.style.width = '400px';
+			nd.style.height = '400px';
+
+			nd.src = 'images/adv'+counter+'.jpg';
+			if(counter == 3) {
+				counter--;
+			} else 	if(counter == 2) {
+				counter++;
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+	<img id='img0' src='images/adv2.jpg' onmouseover='changeImage()' onmouseout='changeImage()' />
+</body>
+</html>

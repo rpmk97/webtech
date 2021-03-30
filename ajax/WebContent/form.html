@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple AJAX Form</title>
+<script>
+
+	function doAJAX() {
+		xhr = new XMLHttpRequest();
+		xhr.open('GET', 'news.jsp', true);
+		xhr.onreadystatechange = handleData; //Registering function with onchange event
+		xhr.send();
+		console.log("Yes inside AJAX Call!!!!");
+	}
+
+	function handleData() {
+		if(xhr.readyState == 4){
+			var contentDiv = document.getElementById('contentDiv');	
+			if(xhr.status == 200){
+				contentDiv.innerHTML = xhr.responseText;
+			}else {
+				contentDiv.innerHTML = '<p>Error in loading data from server.....</p>';
+			}
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="GO" onclick="doAJAX();" />
+	<br />
+	<div id='contentDiv'></div>
+</body>
+</html>

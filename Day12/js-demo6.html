@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+		
+		function hello (){
+			document.write("Hello jiiiii");
+			document.write("<br/>");
+
+			return function (){
+				document.write("Hi jiiiii");
+				document.write("<br/>");
+			};
+			
+		}
+
+		var x = hello();
+		document.write(x);
+		document.write("<br/>");
+		x();	
+	
+	</script>
+	</head>
+<body>
+</body>
+</html>

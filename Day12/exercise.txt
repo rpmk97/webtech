@@ -1,0 +1,18 @@
+1) Write a program which will calculate the square of numbers from 10 to 500
+   and will display only those results which are divisible by 10;
+
+2) Write a program which will generate unique and random numbers for some 
+   sequencing purposes in such a way that those use cases which need number
+   in 4 digit range should get it, and where 6 digit numbers are required 
+   should get it and so on and so on. And should allow to generate numbers
+   with custom ranges also. You have a to design a function like that so 
+   that can fulfill this requirement as a single function. 
+
+3) HTML Page has one button and one H1 element. Clicking on button should 
+   change the text of h1 to different text.
+
+4) HTML Page has one image and on mouse hover, image should widen in all the
+   directions upto 500x500.
+
+5) HTML Page has one image and on mouse hover, change image from current one
+   to different one and on mouse out change image back to original one.

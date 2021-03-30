@@ -1,0 +1,38 @@
+startNetworkServer -p 4444
+startNetworkServer -h 0.0.0.0
+
+start ij.bat
+
+connect 'jdbc:derby://localhost:4444/training;create=true';
+connect 'jdbc:derby://localhost:4444/C:\HSBC-DB\training';
+
+disconnect;
+
+run 'schema.sql';
+run 'data.sql';
+
+SELECT * FROM CARS FETCH FIRST 4 ROWS ONLY;
+
+SELECT * FROM CARS OFFSET 4 ROWS;
+
+SELECT * FROM CARS OFFSET 4 ROWS FETCH NEXT 3 ROWS ONLY;
+
+SELECT MIN(PRICE) AS "PRICE", MAX(PRICE) AS "MAX", AVG(PRICE) AS "AVG", 
+SUM(PRICE) AS "SUM" FROM CARS;
+
+RENAME TABLE CARS TO CAR_DETAILS;
+RENAME COLUMN CAR_DETAILS.VIN TO C_VIN;
+
+VALUES CURRENT_DATE;
+VALUES CURRENT SCHEMA;
+VALUES CURRENT_TIME;
+VALUES CURRENT_TIMESTAMP;
+VALUES LENGTH('Wonderful day');
+VALUES UPPER('derby');
+VALUES LOWER('Derby');
+VALUES SUBSTR('blueberries', 5);      
+VALUES SUBSTR('blueberries', 1, 4);
+VALUES ABS(-4);
+VALUES CEIL(3.4), CEIL(3.8);
+VALUES FLOOR(3.4), FLOOR(3.8);
+VALUES SQRT(16.0);

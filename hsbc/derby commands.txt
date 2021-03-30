@@ -1,0 +1,11 @@
+startNetworkServer -p 4444
+startNetworkServer -h 0.0.0.0
+
+start ij.bat
+
+connect 'jdbc:derby://localhost:4444/C:\HSBC-DB\EMS;create=true';
+
+run 'schema.sql';
+run 'data.sql';
+
+disconnect;

@@ -1,0 +1,29 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming coventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Varialble name should start with small letter
+
+1) Create a banking application for core banking allowing
+   withdrawal,deposit, balance,open,close
+
+   Things to consider :
+	1) Fields : accountNo,name,balance
+	2) Provide banking for savings and current account both
+	3) Use Inheritence feature whereever applicable
+	5) Use and throw right exception in case of below error conditions
+	   a) if account number does not exist
+	   b) if account number is out of range as per data type
+	   c) if amount trying to withdraw is above current available balance
+	   d) if amount trying to withdraw is a negative value
+	   e) if amount trying to withdraw is more then Rs/- 10000 as per quota limit
+	   f) if setting od limit above Rs 5 Lac in current account
+	   g) if amount trying to deposit is a negative value
+	   h) can nnot deposit more than Rs 2 Lac in a day
+	   
+	   

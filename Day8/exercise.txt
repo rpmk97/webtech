@@ -1,0 +1,34 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Write a program to read data from a file and display each line contains 
+   how many words by line number.
+   Hint - Use String.split or StringTokenizer class
+   
+2) Write a program to read data from a file and only entertain unique words while 
+   doing processing and take the help of a collection to hold unique words and
+   then display how many unique words found.
+   Hint - Use String.split or StringTokenizer class
+  
+3) Write a program to read and process 2 files concurrently and display content 
+   on console saying File 1 and File 2 data.
+   
+4) Write a program to read 2 files concurrently and write the same data into 3 file 
+   without missing any line or word sequentially.
+   Hint - Use Thread.join()
+      
+5) Write a program to read data from a file and will calculate a word repeat how many
+   times and will count repeat count also and finally will dump on console each 
+   repeating word with count. Take the help of right collection.
+   Hint - HashMap can be used
+      
+      

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<style>
+		#div0 {
+			background-color: rgba(200,100,0,.5);
+			width:30%;
+		}	
+	</style>
+	<script>
+		function hello(evt) {
+			console.log(evt.target.nodeName);
+			console.log(evt.target.id);
+			console.log(evt.target.type);
+			console.log(evt.button);
+			console.log(evt.clientX);
+			console.log(evt.clientY);
+			console.log(evt.screenX);
+			console.log(evt.screenY);
+			console.log(evt.ctrlKey);
+			console.log(evt.shiftKey);
+			console.log("Hello to All");
+		}
+
+		function doWork() {
+			console.log("Do Some Work...");
+		}
+
+		function makeBox() {
+			var nd = document.getElementById('div0');
+			nd.innerHTML = 'Beautiful Box';
+			nd.style.color = 'white';
+			nd.style.width = '100px';
+			nd.style.textAlign = 'center';
+			nd.style.height = '100px';
+			nd.style.boxShadow = '10px 20px 10px yellow';
+			nd.style.margin = 'auto';
+			nd.style.marginBottom = '50px';
+		}
+
+
+	</script>
+</head>
+<body>
+	<div id='div0' onclick='makeBox()'>
+		Small Div
+	</div>
+		
+	<input id='btn0' type=button value=Hello ondblclick="doWork()" onclick="hello(event)" />
+	<input id='btn1' type=button value=Hi onclick="hello(event)" />
+	<button id='btn2' onclick="hello(event)">Bye</button>
+</body>
+</html>

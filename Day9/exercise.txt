@@ -1,0 +1,84 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Create an application to place order to order_master and order_details tables and 
+   involve other tables also.
+   customer_master
+ 		cid int primary key AI
+   		name varchar size 20 not null
+   		phone varchar size 10 not null
+   		email varchar size 20 not null
+   		address varchar size 50 not null
+
+   product_master
+ 		pid int primary key AI
+   		title varchar size 20 not null
+   		qty int size 5 not null
+   		price decimal size 10,2 not null
+  
+   order_master
+   		oid int primary key AI
+   		cid int foreign key of customer_master table	
+   		total_price decimal
+   		order_date date default current date
+   		status varchar in New,Pending,Delivered,Active
+   			
+	order_details
+   		line_number int primary key AI
+   		oid int foreign key of order_master
+   		pid int foreign key of product_master
+   		qty int 
+   					
+   	Things to remember :
+   	
+   	a) Follow Layered Architecture
+   	b) Create DAOs for all the tables
+   	c) Create Models for all the tables
+   	d) Create Services for all the tables
+   	e) Start transactions from service layer
+   	f) Create Util for DB connections
+   	g) Use singleton pattern where ever makes sense
+   	h) Use factory pattern where ever makes sense
+   	
+   	Java Classes for order tables
+   	a) Order
+   		Fields : 
+   			orderId int
+   			customerId int
+   			totalPrice double
+   			orderDate LocalDate
+   			status char
+   			   			
+   	b) OrderDetail
+   	c) OrderDAO
+   		Methods  :
+   		Order	saveOrder(Order order) throws DataAccessException
+   		Order	updateOrder(Order order) throws DataAccessException
+   		boolean	deleteOrder(int oid) throws DataAccessException
+   		List<Order>	selectAll throws DataAccessException
+   		Order selectById(int id) throws OrderNotFoundException,DataAccessException
+   	d) OrderDetailDAO
+   			
+   	e) OrderService
+   		Order	placeOrder(Order order) throws DataAccessException
+   		Order	modifyOrder(Order order) throws DataAccessException
+   		boolean	removeOrder(int oid) throws DataAccessException
+   		List<Order>	listAll throws DataAccessException
+   		Order readById(int id) throws OrderNotFoundException,DataAccessException
+   	
+   		
+   	f) OrderNotFoundException,DataAccessException
+   	
+   	
+   	
+   	
+   		

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple AJAX Form</title>
+<style>
+	h4{
+		display: inline;
+	}
+</style>
+<script>
+	function doAJAX() {
+		xhr = new XMLHttpRequest();
+		xhr.open('GET', 'cars.json', true);
+		xhr.onreadystatechange = handleData;
+		xhr.send();
+		console.log("Yes inside AJAX Call!!!!");
+	}
+
+	function handleData() {
+		if (xhr.readyState == 4) {
+			var contentDiv = document.getElementById('contentDiv');
+			var cars = JSON.parse(xhr.responseText);
+			for(var idx=0;idx<cars.length;idx++) {
+				var car = cars[idx];
+				var row = "<div><h4>Name : "+car.make +" "+ car.model+"</h4><h4>Price : "+car.price+"</h4><h4>Color : "+car.color+"</h4></div>";
+				contentDiv.innerHTML = contentDiv.innerHTML + row;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<a href=# onclick="doAJAX();">Load Cars</a>
+	<br />
+	<div id='contentDiv'></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[		
+ 	{"vin":1001,"model":"X6","make":"BMW","price":8900000,"color":"Black"},
+	{"vin":1002,"model":"X4","make":"BMW","price":700000,"color":"Yellow"},
+	{"vin":1003,"model":"A5","make":"Audi","price":3400000,"color":"Red"},
+	{"vin":1004,"model":"Q5","make":"Audi","price":340000,"color":"White"},
+	{"vin":1005,"model":"A7","make":"Audi","price":2000000,"color":"Yellow"},
+	{"vin":1006,"model":"Swift","make":"Maruti","price":100000,"color":"Red"},
+	{"vin":1007,"model":"Cruze","make":"Chevrolet","price":190000,"color":"Black"},
+	{"vin":1008,"model":"J9","make":"Jaguar","price":3400000,"color":"Yellow"},
+	{"vin":1009,"model":"Sunny","make":"Nissan","price":230000,"color":"Red"},
+	{"vin":1010,"model":"Indica","make":"Tata","price":90000,"color":"Black"},
+	{"vin":1011,"model":"Swift","make":"Maruti","price":90000,"color":"Black"},
+	{"vin":1011,"model":"Zing","make":"Hyundai","price":90000,"color":"Black"}
+]

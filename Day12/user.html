@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation Demo</title>
+	<style>
+		
+		.error {
+			color:red;
+			font-style:bold;
+		}	
+
+		table {
+			background-color:grey;
+			margin:auto;
+			width:500px;
+		}
+
+		form {
+			width:100%;
+		}
+
+		form label {
+			width:100%;
+		}
+
+		form input {
+			width:100%;
+		}
+
+	</style>
+	<script>
+		function validateForm() {
+			console.log("========Form Validation Start=========");
+			var array = document.getElementsByTagName('input');
+			var nd = array[0];
+			if(nd.value == ''){	
+				var div = document.getElementById(nd.name+'-Message');
+				div.innerHTML = 'Name can not be left blank!!';
+				nd.focus();
+				return false;
+			}
+			nd = array[1];
+			if(nd.value == ''){
+				div = document.getElementById(nd.name+'-Message');
+				div.innerHTML = 'Age can not be left blank!!';
+				nd.focus();
+				return false;
+			} else {
+				div = document.getElementById(nd.name+'-Message');
+				if(nd.value <= 10){
+					div.innerHTML = 'Age can not be lower than 10!!';
+					nd.focus();
+					return false;
+				} 
+				if(nd.value >=80){
+					div.innerHTML = 'Age can not be more than 80!!';
+					nd.focus();
+					return false;
+				}
+			}
+			return true;			
+		}
+	</script>
+</head>
+<body>		
+	<table>
+	<form action='user.jsp' method='GET' onsubmit='return validateForm();'>	
+	<tbody>
+		<tr>
+			<td><label for='uname'>Name : </label></td>
+			<td><input type=text value=Raj name='uname' id='uname' /></td>
+			<td><div id='uname-Message' class='error'></div></td>
+		</tr>
+		<tr>
+			<td><label for='uage'>Age : </label></td>
+			<td><input type=number value=24 name='uage' id='uage' /></td>
+			<td><div id='uage-Message' class='error'></div></td>
+		</tr>
+		<tr>
+			<td><input type=submit value=Save /></td>
+		</tr>
+	</tbody>
+	</form>
+	</table>
+</body>
+</html>

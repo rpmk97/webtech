@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+		
+		function grow (){
+			document.write("I am just born!!");
+			document.write("<br/>");
+
+			return function (){
+				document.write("I am little grown!!");
+				document.write("<br/>");
+
+				return function (){
+					document.write("I am now young!!");
+					document.write("<br/>");
+					
+					return function (age){
+						document.write("I can now fight coz my age is : "+age);
+						document.write("<br/>");
+					
+						return function (){
+							document.write("I can now kill people!!");
+							document.write("<br/>");
+						};
+					};	
+				};
+			};
+			
+		}
+
+		grow()()()(34)();
+	
+	</script>
+	</head>
+<body>
+</body>
+</html>

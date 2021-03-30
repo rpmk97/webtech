@@ -1,0 +1,18 @@
+header {
+	background-color: navy;
+	color: white;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	border: 10px solid aqua;
+	border-radius: 50px;
+}
+
+section {
+	background-color: navy;
+	color: white;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	height: 200px;
+}

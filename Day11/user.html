@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration Page</title>
+</head>
+<body>
+	<form novalidate action='register.jsp' method='POST'>
+		<label for='user-id'>User ID :</label>
+		<input type='text' value='1000' id='user-id' name='user-id'  /><br/><br/>
+		<label for='password'>Password :</label>
+		<input type='password' value='secret' id='password' name='password'  /><br/><br/>
+		<label for='name'>Name :</label>
+		<input type='text' value='Raj' required id='name' name='name'  /><br/><br/>
+		<label for='age'>Age :</label>
+		<input type='number'  value='20' required min='10' max='120'  id='age' name='age'  /><br/><br/>
+		<label for='dob'>DOB :</label>
+		<input type='date' id='dob' name='dob'  /><br/><br/>
+		<label for='tob'>TOB :</label>
+		<input type='time' id='tob' name='tob'  /><br/><br/>
+		<label for='gender'>Gender :</label>
+		<input type='radio' value='M' id='gender0' name='gender'  />Male
+		<input type='radio' value='F' id='gender1' name='gender'  />Female
+		<br/><br/>
+		<label for='phone'>Phone :</label>
+		<input type='tel' id='phone' name='phone'  /><br/><br/>
+		<label for='email'>Email :</label>
+		<input type='email' id='email' name='email'  /><br/><br/>
+		<label for='address'>Address :</label>
+		<textarea rows=10 cols=40 id='address' name='address'>10, Janpath, Delhi</textarea>
+		<br/><br/>
+		<label for='city'>City :</label>
+		<select id='city' name='city'>
+			<option value='Delhi'>Delhi</option>
+			<option value='Pune'>Pune</option>
+			<option value='Mumbai'>Mumbai</option>
+			<option value='Satara'>Satara</option>
+		</select>
+		<br/><br/>
+		<label for='lang'>Languages :</label>
+		<input type='checkbox' value='H' id='lang' name='lang' />Hindi
+		<input type='checkbox' value='E' id='lang' name='lang' />English
+		<input type='checkbox' value='P' id='lang' name='lang' />Punjabi
+		<input type='checkbox' value='M' id='lang' name='lang' />Marathi
+		<input type='checkbox' value='G' id='lang' name='lang' />Gujrati
+		<br/><br/>
+		<label for='url'>URL :</label>
+		<input type='url' value='http://facebook.com/riteshtyagi' id='url' name='url'  /><br/><br/>
+		<label for='weight'>Weight(KG) :</label>
+		<input type='range' value='70' min='20' max='160' id='weight' name='weight'  /><br/><br/>
+		<input type='button' value='Register' />
+		<input type='submit' value='Register' /><br/>
+	</form>
+</body>
+</html>

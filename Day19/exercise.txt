@@ -1,0 +1,43 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Create a simple spring application which will have a DAO known as UserRatingDAO
+   and configure it as a repository in spring container and will have 4 below dependencies
+   like driver,url,user,password and will be injected using field based injection and a
+   annotation based configuration only and values should be picked 
+   from jdbc.properties file.
+   
+   And will have a service known as UserRatingService and deployed in container 
+   as a service. 
+  
+   UserRatingDAO Functionalities :
+   1) saveUserRating(username,rating,comment) method
+   2) List<UserRating> selectAll() method
+   3) double average() method
+   4) int getTotalUsers() method
+   
+   UserRatingService Functionalities :
+   1) addUserRating(username,rating,comment) method
+   2) List<UserRating> listAll() method
+   3) double avegareRating() method
+   2) int userCount() method 
+   	 
+   Main :
+   	 will call all the function from UserRatingService and display result on screen.
+   	 
+   	 
+  DB table
+  userid int PK AI 
+  name varchar 20 not null
+  rating int 1 not null
+  comment varchar 100 null
+  rating_date date default current date

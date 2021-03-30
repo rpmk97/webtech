@@ -1,0 +1,25 @@
+Rules to keep in mind :	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Method name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+5) User annotations for configurations
+
+
+1) Create a simple spring mvc application which will have following urls to handle :
+
+  a) /home --- will display user rating app "home page" using UserRatingsController
+  b) Display user rating form by hitting "Register Feedback" link in the home page 
+     using UserRatingsController.
+  c) Submit the feed back form to UserRatingsController and save 
+  	 to DB/ without DB using application scope. 
+  d) Show Average rating for all the users by hitting "Average Rating link"
+  
+  All views will be jsp pages.
+   

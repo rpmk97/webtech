@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Capture Form</title>
+<style>
+#box {
+	border: 2px solid;
+	border-radius: 5px solid;
+	height: 40px;
+	width: 69%;
+	text-align: center;
+}
+
+#top {
+	padding-left: 10%;
+}
+
+button {
+	padding-left: 5%;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<header>
+		<p>Register your customer feedback about our Pressure Cooker by
+			clicking on one of the below:</p>
+	</header>
+	<section>
+		<form action="feedbackRegister" method="POST">
+		
+			<button name='rating' value='1'>Very Poor(1)</button>
+			<button name='rating' value='2'>Poor(2)</button>
+			<button name='rating' value='3'>Average(3)</button>
+			<button name='rating' value='4'>Good(4)</button>
+			<button name='rating' value='5'>Excellent(5)</button>
+		</form>
+	</section>
+</body>
+</html>

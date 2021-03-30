@@ -1,0 +1,18 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Create a servlet which will display your name ,age and phone number in html form
+   to browser.
+
+2) Create a servlet which will fetch all the data from product_master table and will
+   send it in html tabular format to display inside browser.
+   

@@ -1,0 +1,19 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Create a simple spring application which will have a DAO known as UserRatingDAO
+   and configure it as a bean in spring container and will have 4 below dependencies
+   like driver,url,user,password and will be injected using setter based injection and 
+   values should be picked from jdbc.properties file.
+   
+   And simple will display DB info using a info method. Do not connect to DB 
+   at the moment.	

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple AJAX Form</title>
+<script>
+	function doAJAX() {
+		xhr = new XMLHttpRequest();
+		xhr.open('GET', 'cars.jsp', true);
+		xhr.onreadystatechange = handleData;
+		xhr.send();
+		console.log("Yes inside AJAX Call!!!!");
+	}
+
+	function handleData() {
+		if (xhr.readyState == 4) {
+			var contentDiv = document.getElementById('contentDiv');
+			var car = JSON.parse(xhr.responseText);
+			contentDiv.innerHTML = "<h3>VIN : "+car.vin+"</h3>";
+			contentDiv.innerHTML = contentDiv.innerHTML + "<h3>Name : "+car.make+" "+car.model+"</h3>";
+			contentDiv.innerHTML = contentDiv.innerHTML + "<h3>Price : "+car.price+"</h3>";
+		}
+	}
+</script>
+</head>
+<body>
+	<a href=# onclick="doAJAX();">Load Cars</a>
+	<br />
+	<div id='contentDiv'></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="carService" class="com.example.di.CarService">
+		<constructor-arg>
+			<ref bean="carDAO" />
+		</constructor-arg>
+		<constructor-arg>
+			<value>Cheap Car Management Utility</value>
+		</constructor-arg>
+		<property name="title">
+			<value>Luxury Car Management Utility</value>
+		</property>
+	</bean>
+	
+	<bean id="carDAO" class="com.example.di.CarDAO" />
+	
+</beans>

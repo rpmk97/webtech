@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+		
+		function cityInfo(city) {
+			return function (name) {
+				document.write("Hello Mr. "+name+", We know you live in : "+city);
+				document.write("<br/>");
+			};
+		}
+
+		/*cityInfo('Pune')('Jaggu');		
+		cityInfo('Pune')('Pintu');		
+		cityInfo('Pune')('Chandu');*/
+		
+		var puneCityInfo = cityInfo('Pune');	
+		//20 loc	
+		puneCityInfo('Jaggu');
+		puneCityInfo('Chandu');
+		puneCityInfo('Pintu');
+		
+	</script>
+	</head>
+<body>
+</body>
+</html>

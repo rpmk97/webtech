@@ -1,0 +1,22 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+
+1) Create an application for a project management wherein a team of 10
+   developers is going to work on that project.
+    
+   Things to consider :
+	1) Should use multiple entity classes with proper names
+	2) Project will have title, duration, team count -- all private
+	2) Each team member has name,phone,email 
+	3) Team should be able to finish the project in given time line
+	4) Divide the total project duration equally with each team member
+	
+	

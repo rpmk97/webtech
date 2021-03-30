@@ -1,0 +1,54 @@
+ 		
+		nav {
+			background-color:black;
+			border-radius:20px;
+		}
+			
+		header li {
+			display:inline;
+			line-height:2.5em;
+		}
+
+		footer {
+			position:fixed;
+			bottom:0px;
+			width:99%;
+		}
+
+		footer li {
+			display:inline;
+			line-height:1.8em;
+		}
+
+		nav ul li a {
+			color:white;
+			text-decoration:none;
+			margin-right:20px;
+		}
+
+		header a {
+			font-size:1.5em;
+		}
+
+		footer a {
+			font-size:1.0em;
+			font-style:italic;
+		}
+
+
+		nav ul li a:hover {
+			background-color:white;
+			color:black;
+			border-radius:20px;
+		}
+
+		header input {
+			float:right;
+			margin-top:6px;
+			margin-right:20px;
+			height:25px;
+			width:200px;
+			border-radius:20px;
+			text-align:center;
+			outline:none;
+		}

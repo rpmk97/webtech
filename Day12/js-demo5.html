@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+
+		function sum (a,b){
+			return a+b;
+		}
+
+		var rs = sum(10,5);
+		document.write(rs);
+		document.write("<br/>");
+
+		
+		function hello (){
+			document.write("Hello jiiiii");
+			document.write("<br/>");
+
+			function hi (){
+				document.write("Hi jiiiii");
+				document.write("<br/>");
+			}
+			
+			return hi;
+		}
+
+		var x = hello();
+		
+		document.write(typeof x);
+		document.write("<br/>");
+
+		x();	
+	
+	</script>
+	</head>
+<body>
+</body>
+</html>

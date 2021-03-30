@@ -1,0 +1,51 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming conventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Variable name should start with small letter
+4) Proper exception handling must be there
+
+1) Write a program to hold 10 person names which should be unique and 
+   display them sorted on screen.
+   
+2) Write a program to hold 10 cars objects and display them sorted and make 
+   sure no duplicate car objects are there.
+   Each car will have below properties :
+   
+   int vin
+   String model
+   String make
+   double price
+   int speed
+   String color  
+   
+   Requirements :
+   		a) Display car objects sorted by price
+   		b) Display car objects sorted by make
+   		c) Display car objects sorted by vin and price both in ascending order using 
+   		   custom comparator
+   		
+3) Write a program to hold 20 cars object wherein application should allow to keep 
+   the cars by their ranking and ranking is decided by which cars are highest sold 
+   cars till now in the history for a particular model. And while displaying them on 
+   console, cars with high ranking should be on top.
+   
+   Ranking conditions :
+   
+   cars sold greater then 50000 = Rank 5 (Highest Rank)
+   cars sold greater then 40000 = Rank 4
+   cars sold greater then 30000 = Rank 3
+   cars sold greater then 25000 = Rank 2
+   cars sold greater then 500 = Rank 1 (Lowest Rank)
+   
+   
+   
+   
+   
+    
+   

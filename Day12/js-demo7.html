@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+		
+		function grow (){
+			document.write("I am just born!!");
+			document.write("<br/>");
+
+			return function (){
+				document.write("I am little grown!!");
+				document.write("<br/>");
+			};
+			
+		}
+
+		var x = grow();
+		//200 loc
+		x();	
+	
+	</script>
+	</head>
+<body>
+</body>
+</html>

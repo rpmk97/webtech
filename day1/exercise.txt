@@ -1,0 +1,20 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming coventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Varialble name should start with small letter
+
+1) Write a program which will display on console below info :
+   Your Name,City,Phone,Email.
+ 
+2) Write a program which will have a numeric array of size 10 and 
+   already having 10 values. You should increase each value by
+   5 then display on console.
+
+3) Write a program which will have a numeric array of size 10 and 
+   already having 10 values. You should display them in reverse order.

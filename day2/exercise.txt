@@ -1,0 +1,29 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming coventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Varialble name should start with small letter
+
+1) Create a banking application for core banking allowing
+   withdrawal,deposit, balance,open,close
+
+   Things to consider :
+	1) Fields : accountNo,name,balance
+	2) Provide banking for savings and current account both
+	3) Use Inheritence feature whereever applicable
+
+2) Create an application for a pizza restaurant wherein application
+   will provide functionaities preparing,baking pizzas
+    
+   Things to consider :
+	1) Should use multiple entity classes with proper names
+	2) Should be build for pan pizzas,thin crust pizzas, 
+	   cheese brust pizzas
+	3) Use Inheritence feature whereever applicable
+	4) Use Polymorphism feature whereever applicable
+	5) Code should be quality code

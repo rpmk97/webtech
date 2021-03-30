@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+
+	function doAJAX(){
+		xhr=new XMLHttpRequest();
+		
+		var i=document.getElementById('f').value;
+		var j=document.getElementById('s').value;
+	
+		xhr.open("GET","cal.jsp?f="+i+"&s="+j,true);
+		xhr.onreadystatechange=handleData;
+		xhr.send();
+	}
+	
+	function handleData(){
+		if(xhr.readyState==4){
+			var div0=document.getElementById('div0');
+			div0.innerHTML='Result : '+xhr.responseText;
+		}
+	}
+	
+	
+</script>
+</head>
+<body>
+<center>
+
+	Enter Number : <input type=text value=10 name=f id=f /><br>
+	Enter Number : <input type=text value=20 name=s id=s /><br>
+				   <input type=button value=SUM onclick='doAJAX();' />	
+				   <br>
+				   <div id='div0'></div>
+</center>
+</body>
+</html>

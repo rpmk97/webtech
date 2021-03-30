@@ -1,0 +1,15 @@
+Rules to keep in mind:	 	
+
+1) Write clean code
+2) Use proper naming coventions
+3) Use proper indentations
+
+Some Java Rules
+1) Class name should start with capital letter
+2) Function name should start with small letter
+3) Varialble name should start with small letter
+4) Proper exception handling must be there
+
+1) Write a program to write your complete name in a file using byte based stream.
+2) Write a program to write your complete name,address and phone 
+   in a file using char based stream.

@@ -1,0 +1,8 @@
+img {
+	display : block;
+	border : 20px inset tomato;
+	width : 100px;
+	height: 100px;
+	margin: auto;
+	margin-top :50px;
+}

@@ -1,0 +1,156 @@
+startNetworkServer -p 4444
+startNetworkServer -h 0.0.0.0
+
+jdbc:derby://localhost:1527/dbname;create=true
+jdbc:derby://localhost:1527/c:\temp\mydatabase
+
+org.apache.derby.jdbc.ClientDriver
+
+jdbc:derby://localhost/c:/db
+
+connect 'jdbc:derby:c:\temp\db';
+
+connect 'jdbc:derby://localhost:1527/c:\temp\db;create=true';
+
+disconnect;
+
+run 'script.sql'
+
+DROP TABLE AUTHORS;
+
+CREATE TABLE AUTHORS(ID BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY 
+> (START WITH 1, INCREMENT BY 1), NAME VARCHAR(25));
+
+CREATE TABLE BOOKS(ID BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY 
+> (START WITH 1, INCREMENT BY 1), AUTHOR_ID BIGINT, TITLE VARCHAR(150), 
+> FOREIGN KEY(AUTHOR_ID) REFERENCES AUTHORS(ID));
+ij> INSERT INTO AUTHORS(NAME) VALUES('Jack London');
+ij> INSERT INTO AUTHORS(NAME) VALUES('Honore de Balzac');
+ij> INSERT INTO AUTHORS(NAME) VALUES('Lion Feuchtwanger');
+ij> INSERT INTO AUTHORS(NAME) VALUES('Emile Zola');
+ij> INSERT INTO AUTHORS(NAME) VALUES('Truman Capote');
+
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(1, 'Call of the Wild');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(1, 'Martin Eden');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(2, 'Old Goriot');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(2, 'Cousin Bette');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(3, 'Jew Suess');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(4, 'Nana');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(4, 'The Belly of Paris');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(5, 'In Cold blood');
+ij> INSERT INTO BOOKS(AUTHOR_ID, TITLE) VALUES(5, 'Breakfast at Tiffany');
+
+
+SELECT NAME, TITLE FROM AUTHORS, BOOKS
+> WHERE AUTHORS.ID = BOOKS.AUTHOR_ID;
+
+SELECT * FROM BOOKS FETCH FIRST 4 ROWS ONLY;
+
+SELECT * FROM BOOKS OFFSET 4 ROWS;
+
+SELECT * FROM BOOKS OFFSET 4 ROWS FETCH NEXT 3 ROWS ONLY;
+
+SELECT * FROM CARS WHERE PRICE > 40000;
+
+SELECT NAME FROM CARS WHERE NAME LIKE '%en';
+
+ SELECT * FROM CARS WHERE ID IN (2, 5, 7);
+
+ SELECT * FROM CARS WHERE PRICE BETWEEN 20000 AND 50000;
+
+ SELECT * FROM CARS ORDER BY PRICE;
+
+SELECT * FROM CARS ORDER BY PRICE DESC;
+
+SELECT COUNT(ID) FROM AUTHORS;
+
+ SELECT MIN(PRICE) AS "PRICE", MAX(PRICE) AS "MAX",
+> AVG(PRICE) AS "AVG", SUM(PRICE) AS "SUM" FROM CARS;
+
+VALUES CURRENT_DATE;
+
+VALUES CURRENT SCHEMA;
+VALUES CURRENT_TIME;
+ VALUES CURRENT_TIMESTAMP;
+VALUES LENGTH('Wonderful day');
+ VALUES UPPER('derby');
+VALUES LOWER('Derby');
+ VALUES SUBSTR('blueberries', 5);      
+VALUES SUBSTR('blueberries', 1, 4);
+
+VALUES ABS(-4);
+VALUES CEIL(3.4), CEIL(3.8);
+ VALUES FLOOR(3.4), FLOOR(3.8);
+VALUES SQRT(16.0);
+
+UPDATE CARS SET PRICE=58000 WHERE ID=2;
+
+
+CREATE TABLE CARS2(ID BIGINT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY
+> (START WITH 1, INCREMENT BY 1), NAME VARCHAR(30), PRICE INT);
+
+
+INSERT INTO CARS2(NAME, PRICE) SELECT NAME, PRICE FROM CARS;
+ SELECT * FROM CARS2;
+DELETE FROM CARS2 WHERE ID=8;
+
+ DELETE FROM CARS2;
+
+DROP TABLE CARS2;
+RENAME TABLE CARS TO MYCARS;
+RENAME COLUMN MYCARS.ID TO CID;
+
+
+   System.setProperty("derby.system.home", "/home/janbodnar/.derby");
+            
+            con = DriverManager.getConnection(url);
+            st = con.createStatement();
+            st.executeUpdate("CREATE TABLE CARS(ID INT PRIMARY KEY,"
+                    + "NAME VARCHAR(30), PRICE INT)");
+            st.executeUpdate("INSERT INTO CARS VALUES(1, 'Audi', 52642)");
+            st.executeUpdate("INSERT INTO CARS VALUES(2, 'Mercedes', 57127)");
+            st.executeUpdate("INSERT INTO CARS VALUES(3, 'Skoda', 9000)");
+            st.executeUpdate("INSERT INTO CARS VALUES(4, 'Volvo', 29000)");
+            st.executeUpdate("INSERT INTO CARS VALUES(5, 'Bentley', 350000)");
+            st.executeUpdate("INSERT INTO CARS VALUES(6, 'Citroen', 21000)");
+            st.executeUpdate("INSERT INTO CARS VALUES(7, 'Hummer', 41400)");
+            st.executeUpdate("INSERT INTO CARS VALUES(8, 'Volkswagen', 21600)");
+            DriverManager.getConnection("jdbc:derby:;shutdown=true");
+
+
+
+
+        String url = "jdbc:derby:testdb;user=USER12";
+
+
+ij> CONNECT 'jdbc:derby:testdb';
+ij> SET CURRENT SCHEMA = USER12;
+ij> SELECT NAME, TITLE FROM AUTHORS, BOOKS WHERE AUTHORS.ID = BOOKS.AUTHOR_ID;
+
+      con = DriverManager.getConnection(url);
+
+            con.setAutoCommit(false);
+            st = con.createStatement();
+
+            st.addBatch("DELETE FROM CARS");
+            st.addBatch("INSERT INTO CARS VALUES(1, 'Audi', 52642)");
+            st.addBatch("INSERT INTO CARS VALUES(2, 'Mercedes', 57127)");
+            st.addBatch("INSERT INTO CARS VALUES(3, 'Skoda', 9000)");
+            st.addBatch("INSERT INTO CARS VALUES(4, 'Volvo', 29000)");
+            st.addBatch("INSERT INTO CARS VALUES(5, 'Bentley', 350000)");
+            st.addBatch("INSERT INTO CARS VALUES(6, 'Citroen', 21000)");
+            st.addBatch("INSERT INTO CARS VALUES(7, 'Hummer', 41400)");
+            st.addBatch("INSERT INTO CARS VALUES(8, 'Volkswagen', 21600)");
+            st.addBatch("INSERT INTO CARS VALUES(9, 'Jaguar', 95000)");
+
+            int counts[] = st.executeBatch();
+
+            con.commit();
+
+            System.out.println("Committed " + counts.length + " updates");
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Demo</title>
+	<script>
+		var i = 10;
+
+		hello();
+
+		//Function Declaration
+		function hello() {
+			document.write("Hello jiiiii");
+			document.write("<br/>");
+		}
+
+		hello();
+
+		function sum(a,b) {
+			if(b==undefined)
+				b = 50;
+			document.write(a+b);
+			document.write("<br/>");
+		}
+		
+		sum(10,2);
+		sum(10,2,34,12,34);
+		sum(5);
+		
+		function diff(a,b=20) {
+			document.write(a-b);
+			document.write("<br/>");
+		}
+
+		diff(50,2);
+		diff(50);
+
+
+		function doSum(a,b) {
+			document.write("Length : "+arguments.length);
+			document.write("<br/>");
+			var rs = 0;
+			for(var idx=0;idx<arguments.length;idx++) {
+				rs = rs + arguments[idx];
+			}
+			
+			document.write(rs);
+			document.write("<br/>");
+		}
+
+		doSum(10,10);
+		doSum(3,7,8,23,56,10,10);
+
+	</script>
+	</head>
+<body>
+</body>
+</html>
